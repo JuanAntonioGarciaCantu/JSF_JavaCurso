@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <!-- patron para desplegar los mensajes -->
+            <PatternLayout pattern="%d{HH:mm:ss} [%t] %-5level %logger{36} -%msg%n"></PatternLayout>
+        </Console>
+    </Appenders> 
+    <Loggers>
+        <!-- Nivel con el que se trabajara -->
+        <Root level="info">
+            <!-- Hacia donde mandara la info (previamente creada) -->
+            <AppenderRef ref="Console" />
+        </Root>
+    </Loggers>
+</Configuration>
