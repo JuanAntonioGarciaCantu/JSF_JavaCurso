@@ -5,7 +5,19 @@
         <title>Hola mundo con JSF</title>
     </head>
     <body>
-        <h:outputLabel value="Hola Mundo desde JSF" />
+        <h:form>
+            <table>
+                <tr>
+                    <td><h:outputLabel for="nombre" value="Nombre:"></h:outputLabel></td>
+                    <!-- Permite ingresar el valor del nombre del candidato al Managed Bean "Candidato" -->
+                    <td><h:inputText id="nombre" value="#{candidato.nombre}"></h:inputText></td>
+                    <!-- muestra algun mensaje que genere el componente "inputText" -->
+                    <td><h:message for="nombre"></h:message></td>
+                </tr>
+            </table>
+            <!-- boton que ejecuta la funcion de enviar del Managed Bean(envia los datos ingresados) -->            
+            <h:commandButton value="Enviar" action="#{vacanteForm.enviar()}"/>
+        </h:form>
     </body>
 </html>
 
